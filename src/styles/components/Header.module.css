@@ -52,3 +52,7 @@
   line-height: 18px;
   color: var(--dark);
 }
+
+.headerContainer button:hover {
+  opacity: 0.9;
+}
