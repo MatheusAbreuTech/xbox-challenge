@@ -2,7 +2,7 @@ import styles from '../styles/components/Header.module.css';
 
 export default function Header() {
   return (
-    <div className={`${styles.headerContainer} container`}>
+    <div className={styles.headerContainer}>
       <div>
         <img src="../../public/img/logo-xbox.svg" alt="" />
       </div>

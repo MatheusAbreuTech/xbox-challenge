@@ -1,15 +1,25 @@
-import { useState } from 'react';
+import ControlInfo from './components/ControlInfo';
+import GamesGalery from './components/GamesGalery';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import InfoContainer from './components/infoContainer';
-import container from './styles/global.module.css';
+import InfoContainer from './components/InfoContainer';
+import './styles/global.css';
 
 function App() {
   return (
     <>
-      <Header />
+      <div className="container">
+        <Header />
+
+        <InfoContainer>
+          <Hero />
+        </InfoContainer>
+        <InfoContainer>
+          <ControlInfo />
+        </InfoContainer>
+      </div>
       <InfoContainer>
-        <Hero />
+        <GamesGalery />
       </InfoContainer>
     </>
   );
