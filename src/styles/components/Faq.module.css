@@ -1,0 +1,59 @@
+.faqContainer {
+  width: 100%;
+}
+
+.faqContainer h2 {
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 100%;
+  color: var(--primary);
+  margin-bottom: 3.75rem;
+}
+
+.faqContainer h2 span {
+  color: var(--light);
+}
+
+.questions > div {
+  padding: 2.6rem 0;
+}
+
+.questions > div > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.questions > div > div h4 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.questions > div p {
+  padding-top: 2rem;
+  padding-left: 1rem;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--gray-light);
+}
+
+.icon {
+  font-size: 2rem;
+  color: var(--gray);
+}
+
+.iconUp {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.questions > div:first-child {
+  border-bottom: 2px solid var(--gray);
+}
+
+.questions > div:last-child {
+  border-top: 2px solid var(--gray);
+}

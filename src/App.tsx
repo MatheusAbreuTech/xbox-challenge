@@ -1,4 +1,5 @@
 import ControlInfo from './components/ControlInfo';
+import Faq from './components/Faq';
 import GamesGalery from './components/GamesGalery';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -14,13 +15,21 @@ function App() {
         <InfoContainer>
           <Hero />
         </InfoContainer>
+
         <InfoContainer>
           <ControlInfo />
         </InfoContainer>
       </div>
+
       <InfoContainer>
         <GamesGalery />
       </InfoContainer>
+
+      <div className="container">
+        <InfoContainer>
+          <Faq />
+        </InfoContainer>
+      </div>
     </>
   );
 }
