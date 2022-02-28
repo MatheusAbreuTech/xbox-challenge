@@ -14,9 +14,7 @@ function App() {
       <div className="container">
         <Header />
 
-        <InfoContainer>
-          <Hero />
-        </InfoContainer>
+        <Hero />
 
         <InfoContainer>
           <ControlInfo />

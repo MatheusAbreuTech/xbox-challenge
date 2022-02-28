@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import styles from '../styles/components/Faq.module.css';
+import { FaqScroll } from './ScrollReveal';
 
 interface Questions {
   id: number;
@@ -43,28 +44,30 @@ export default function Faq() {
   };
 
   return (
-    <div className={styles.faqContainer}>
-      <h2>
-        Perguntas <span>frenquentes</span>
-      </h2>
+    <FaqScroll>
+      <div className={styles.faqContainer}>
+        <h2>
+          Perguntas <span>frenquentes</span>
+        </h2>
 
-      <div className={styles.questions}>
-        {questions.map((question) => (
-          <div key={question.id}>
-            <div onClick={() => handleOpenQuestion(question.id)}>
-              <h4>{question.title}</h4>
-              <div className={`${styles.arrow} ${question.isActive ? 'active' : ''}`}>
-                {question.isActive ? (
-                  <IoIosArrowUp className={styles.iconUp} />
-                ) : (
-                  <IoIosArrowDown className={styles.icon} />
-                )}
+        <div className={styles.questions}>
+          {questions.map((question) => (
+            <div key={question.id}>
+              <div onClick={() => handleOpenQuestion(question.id)}>
+                <h4>{question.title}</h4>
+                <div className={`${styles.arrow} ${question.isActive ? 'active' : ''}`}>
+                  {question.isActive ? (
+                    <IoIosArrowUp className={styles.iconUp} />
+                  ) : (
+                    <IoIosArrowDown className={styles.icon} />
+                  )}
+                </div>
               </div>
+              {question.isActive && <p>{question.answer}</p>}
             </div>
-            {question.isActive && <p>{question.answer}</p>}
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </FaqScroll>
   );
 }
