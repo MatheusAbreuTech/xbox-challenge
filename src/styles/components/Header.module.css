@@ -5,21 +5,23 @@
   padding: 2.5rem 0;
 }
 
-.headerContainer ul {
-  max-width: 350px;
+.headerContainer .menuItens ul {
+  max-width: 400px;
   width: 100%;
   display: flex;
   flex: 1;
+  gap: 2rem;
   justify-content: space-between;
+  align-items: center;
   list-style: none;
 }
 
-.headerContainer ul li {
+.headerContainer .menuItens ul li {
   padding: 0.5rem 0;
   position: relative;
 }
 
-.headerContainer ul li::after {
+.headerContainer .menuItens ul li::after {
   content: '';
   background: var(--primary);
   height: 2px;
