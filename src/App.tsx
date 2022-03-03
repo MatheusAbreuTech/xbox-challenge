@@ -30,7 +30,7 @@ function App() {
           <Faq />
         </InfoContainer>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

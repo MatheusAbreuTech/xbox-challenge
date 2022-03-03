@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
-import styles from '../styles/components/Faq.module.css';
-import { FaqScroll } from './ScrollReveal';
+import { FaqScroll } from '../ScrollReveal';
+
+import * as S from './styles';
 
 interface Questions {
   id: number;
@@ -11,6 +12,7 @@ interface Questions {
 }
 
 export default function Faq() {
+  // const [isOpen, setIsOpen] = useState(false);
   const [questions, setQuestions] = useState<Questions[]>([
     {
       id: 1,
@@ -41,11 +43,34 @@ export default function Faq() {
       }
     });
     setQuestions(newQuestion);
+    // setIsOpen(!isOpen);
   };
 
   return (
     <FaqScroll>
-      <div className={styles.faqContainer}>
+      <S.FaqContainer>
+        <S.FaqTitle>
+          Perguntas <S.FaqTitleSpan> frenquentes</S.FaqTitleSpan>
+        </S.FaqTitle>
+
+        <S.FaqQuestionsContainer>
+          {questions.map((question) => (
+            <S.FaqQuestion key={question.id}>
+              <S.FaqQuestionHeader onClick={() => handleOpenQuestion(question.id)}>
+                <S.FaqQuestionTitle>{question.title}</S.FaqQuestionTitle>
+
+                <S.FaqQuestionIcon>
+                  <IoIosArrowDown />
+                </S.FaqQuestionIcon>
+              </S.FaqQuestionHeader>
+
+              {question.isActive && <S.FaqQuestionText>{question.answer}</S.FaqQuestionText>}
+            </S.FaqQuestion>
+          ))}
+        </S.FaqQuestionsContainer>
+      </S.FaqContainer>
+
+      {/* <div className={styles.faqContainer}>
         <h2>
           Perguntas <span>frenquentes</span>
         </h2>
@@ -55,6 +80,7 @@ export default function Faq() {
             <div key={question.id}>
               <div onClick={() => handleOpenQuestion(question.id)}>
                 <h4>{question.title}</h4>
+
                 <div className={`${styles.arrow} ${question.isActive ? 'active' : ''}`}>
                   {question.isActive ? (
                     <IoIosArrowUp className={styles.iconUp} />
@@ -63,11 +89,12 @@ export default function Faq() {
                   )}
                 </div>
               </div>
+
               {question.isActive && <p>{question.answer}</p>}
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </FaqScroll>
   );
 }
