@@ -1,33 +1,34 @@
-import styles from '../styles/components/Footer.module.css';
 import { IoLogoGithub } from 'react-icons/io';
 import { ImLinkedin2 } from 'react-icons/im';
+
+import * as S from './styles';
 
 export default function Footer() {
   return (
     <>
-      <div className={styles.footerContainer}>
-        <div className={styles.footer1}>
-          <img src="../../public/img/logo-xbox.svg" alt="" />
-          <div>
-            <p>© Microsoft 2022</p>
-            <p>Todos os direitos reservados</p>
-          </div>
-        </div>
-        <div className={styles.footer2}>
-          <div>
-            <p>Developed by Matheus Abreu</p>
+      <S.FooterOne>
+        <S.FooterOneLogo src="img/logo-xbox.svg" />
 
-            <div className={styles.socialMedia}>
-              <a href="https://www.linkedin.com/in/matheus-santosab/" target="_blank">
-                <ImLinkedin2 />
-              </a>
-              <a href="https://github.com/MthAbreu" target="_blank">
-                <IoLogoGithub />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+        <S.FooterOneRights>
+          <S.FooterOneText>© Microsoft 2022</S.FooterOneText>
+          <S.FooterOneText>Todos os direitos reservados</S.FooterOneText>
+        </S.FooterOneRights>
+      </S.FooterOne>
+
+      <S.FooterTwo>
+        <S.FooterTwoDiv>
+          <S.FooterTwoAuthor>Developed by Matheus Abreu</S.FooterTwoAuthor>
+
+          <S.FooterTwoSocialMedia>
+            <S.FooterTwoLinks href="https://www.linkedin.com/in/matheus-santosab/" target="_blank">
+              <ImLinkedin2 />
+            </S.FooterTwoLinks>
+            <S.FooterTwoLinks href="https://github.com/MthAbreu" target="_blank">
+              <IoLogoGithub />
+            </S.FooterTwoLinks>
+          </S.FooterTwoSocialMedia>
+        </S.FooterTwoDiv>
+      </S.FooterTwo>
     </>
   );
 }

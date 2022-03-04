@@ -17,7 +17,7 @@ export const HeroTitle = styled.h1`
 
 export const HeroText = styled.p`
   font-size: 1.5rem;
-  color: var(--primary);
+  color: ${props => props.theme.colors.primary};
   letter-spacing: 0.05em;
   text-transform: uppercase;
   line-height: 29px;
@@ -47,7 +47,7 @@ export const Herogradient = styled.div`
   );
   background-repeat: no-repeat;
   opacity: 0.9;
-  border: 1px solid #000000;
+  border: 1px solid ${props => props.theme.colors.light};
   filter: blur(250px);
 `
 

@@ -26,7 +26,7 @@ export const HeaderMenuItem = styled.li`
 
   &::after {
     content: '';
-    background: var(--primary);
+    background: ${props => props.theme.colors.primary};
     height: 2px;
     width: 0;
     right: 0;
@@ -52,12 +52,12 @@ export const HeaderMenuItemLink = styled.a`
 export const HeaderButton = styled.button`
   padding: 1rem 1.5rem;
   text-transform: uppercase;
-  background: var(--primary);
+  background: ${props => props.theme.colors.primary};
   border: none;
   font-weight: bold;
   font-size: 1rem;
   line-height: 18px;
-  color: var(--dark);
+  color: ${props => props.theme.colors.dark};
 
   &:hover {
     opacity: 0.9;

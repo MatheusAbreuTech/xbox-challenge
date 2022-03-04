@@ -13,7 +13,7 @@ export const ControlLef = styled.div`
 `
 
 export const ControlTitle = styled.h2`
- color: var(--primary);
+ color: ${props => props.theme.colors.primary};
   font-size: 4rem;
   padding-bottom: 2.5rem;
   font-weight: 600;
@@ -21,11 +21,11 @@ export const ControlTitle = styled.h2`
 `
 
 export const ControlTitleSpan = styled(ControlTitle)`
-  color: var(--light);
+  color: ${props => props.theme.colors.light};
 `
 
 export const ControlText = styled.p`
-  color: var(--gray-light);
+  color: ${props => props.theme.colors.grayLight};
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 170%;

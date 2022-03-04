@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
+import { IoIosArrowDown } from 'react-icons/io';
 import { FaqScroll } from '../ScrollReveal';
 
 import * as S from './styles';
@@ -12,7 +12,6 @@ interface Questions {
 }
 
 export default function Faq() {
-  // const [isOpen, setIsOpen] = useState(false);
   const [questions, setQuestions] = useState<Questions[]>([
     {
       id: 1,
@@ -43,7 +42,6 @@ export default function Faq() {
       }
     });
     setQuestions(newQuestion);
-    // setIsOpen(!isOpen);
   };
 
   return (
@@ -59,42 +57,19 @@ export default function Faq() {
               <S.FaqQuestionHeader onClick={() => handleOpenQuestion(question.id)}>
                 <S.FaqQuestionTitle>{question.title}</S.FaqQuestionTitle>
 
-                <S.FaqQuestionIcon>
+                <S.FaqQuestionIcon
+                  color={question.isActive ? '#9bf00b' : '#777777'}
+                  transform={question.isActive ? '180' : ''}
+                >
                   <IoIosArrowDown />
                 </S.FaqQuestionIcon>
               </S.FaqQuestionHeader>
 
-              {question.isActive && <S.FaqQuestionText>{question.answer}</S.FaqQuestionText>}
+              <S.FaqQuestionText display={question.isActive ? 'block' : 'none'}>{question.answer}</S.FaqQuestionText>
             </S.FaqQuestion>
           ))}
         </S.FaqQuestionsContainer>
       </S.FaqContainer>
-
-      {/* <div className={styles.faqContainer}>
-        <h2>
-          Perguntas <span>frenquentes</span>
-        </h2>
-
-        <div className={styles.questions}>
-          {questions.map((question) => (
-            <div key={question.id}>
-              <div onClick={() => handleOpenQuestion(question.id)}>
-                <h4>{question.title}</h4>
-
-                <div className={`${styles.arrow} ${question.isActive ? 'active' : ''}`}>
-                  {question.isActive ? (
-                    <IoIosArrowUp className={styles.iconUp} />
-                  ) : (
-                    <IoIosArrowDown className={styles.icon} />
-                  )}
-                </div>
-              </div>
-
-              {question.isActive && <p>{question.answer}</p>}
-            </div>
-          ))}
-        </div>
-      </div> */}
     </FaqScroll>
   );
 }
