@@ -1,11 +1,20 @@
 import * as S from './styles';
+import { FaBars } from 'react-icons/fa';
 
-export default function Header() {
+interface Props {
+  handleOpenSidebar: () => void;
+}
+
+export default function Header({ handleOpenSidebar }: Props) {
   return (
     <S.HeaderContainer>
       <S.HeaderLogo>
         <img src="img/logo-xbox.svg" alt="" />
       </S.HeaderLogo>
+
+      <S.HeaderIcon onClick={handleOpenSidebar}>
+        <FaBars />
+      </S.HeaderIcon>
 
       <S.HeaderMenu>
         <S.HeaderMenuItem>
@@ -18,7 +27,7 @@ export default function Header() {
           <S.HeaderMenuItemLink href="#">Galeria</S.HeaderMenuItemLink>
         </S.HeaderMenuItem>
         <S.HeaderMenuItem>
-          <S.HeaderMenuItemLink href="#">unbox</S.HeaderMenuItemLink>
+          <S.HeaderMenuItemLink href="#">Unbox</S.HeaderMenuItemLink>
         </S.HeaderMenuItem>
       </S.HeaderMenu>
 

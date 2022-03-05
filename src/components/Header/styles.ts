@@ -9,6 +9,21 @@ export const HeaderContainer = styled.nav`
 
 export const HeaderLogo = styled.div``;
 
+export const HeaderIcon = styled.div`
+  display: none;
+
+  @media screen and (max-width: 1025px){
+    display: block;
+    /* position:absolute ;
+    top:0 ;
+    right: 0; */
+    /* transform: translate(-100%, 100%); */
+    font-size: 1.8rem ;
+    cursor: pointer;
+    color: #fff;
+  }
+`
+
 export const HeaderMenu = styled.ul`
   max-width: 400px;
   width: 100%;
@@ -18,6 +33,10 @@ export const HeaderMenu = styled.ul`
   justify-content: space-between;
   align-items: center;
   list-style: none;
+
+  @media screen and (max-width: 1025px){
+    display:none ;
+  }
 `;
 
 export const HeaderMenuItem = styled.li`
@@ -61,5 +80,9 @@ export const HeaderButton = styled.button`
 
   &:hover {
     opacity: 0.9;
+  }
+
+  @media screen and (max-width: 1025px){
+    display:none ;
   }
 `;
