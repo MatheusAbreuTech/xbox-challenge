@@ -5,7 +5,12 @@ export const ControlContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 9rem;
+  gap: 3rem;
+
+  @media screen and (max-width: 1060px){
+    flex-direction: column;
+  }
+
 `
 export const ControlLef = styled.div`
   max-width: 35.5rem;
@@ -18,6 +23,14 @@ export const ControlTitle = styled.h2`
   padding-bottom: 2.5rem;
   font-weight: 600;
   line-height: 130%;
+
+  @media screen and (max-width: 1310px){
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: 350px){
+    font-size: 2rem;
+  }
 `
 
 export const ControlTitleSpan = styled(ControlTitle)`
@@ -29,10 +42,19 @@ export const ControlText = styled.p`
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 170%;
+
+  @media screen and (max-width: 1310px){
+    font-size: 1.2rem;
+  }
 `
 
-export const ControlRight = styled.div``
+export const ControlRight = styled.div`
+  max-width: 30rem;
+  width: 100%;
+`
 
-export const ControlImage = styled.img``
+export const ControlImage = styled.img`
+  width: 100%;
+`
 
 

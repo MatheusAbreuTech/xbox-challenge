@@ -7,13 +7,25 @@ export const FooterOne = styled.div`
   width: min(80vw, 1280px);
   margin: auto;
   padding: 2rem 0;
+
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+    align-items:center ;
+  }
 `;
 
-export const FooterOneLogo = styled.img``;
+export const FooterOneLogo = styled.img`
+  max-width: 100px;
+  width:100% ;
+`;
 
 export const FooterOneRights = styled.div`
   display: flex;
   gap: 2rem;
+
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+  }
 `;
 
 export const FooterOneText = styled.p`
@@ -21,6 +33,10 @@ export const FooterOneText = styled.p`
   font-size: 1.25rem;
   line-height: 150%;
   color: ${props => props.theme.colors.gray};
+
+  @media screen and (max-width: 768px){
+    text-align:center ;
+  }
 `;
 
 export const FooterTwo = styled.div`
@@ -33,6 +49,14 @@ export const FooterTwoDiv = styled.div`
   margin: auto;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px){
+    text-align:center ;
+    flex-direction: column;
+    align-items:center ;
+    gap: 1rem;
+  }
+
 `;
 
 export const FooterTwoAuthor = styled.p`

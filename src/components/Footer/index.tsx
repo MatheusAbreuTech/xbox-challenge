@@ -20,10 +20,10 @@ export default function Footer() {
           <S.FooterTwoAuthor>Developed by Matheus Abreu</S.FooterTwoAuthor>
 
           <S.FooterTwoSocialMedia>
-            <S.FooterTwoLinks href="https://www.linkedin.com/in/matheus-santosab/" target="_blank">
+            <S.FooterTwoLinks href="https://www.linkedin.com/in/MatheusAbreuTech" target="_blank">
               <ImLinkedin2 />
             </S.FooterTwoLinks>
-            <S.FooterTwoLinks href="https://github.com/MthAbreu" target="_blank">
+            <S.FooterTwoLinks href="https://github.com/MatheusAbreuTech" target="_blank">
               <IoLogoGithub />
             </S.FooterTwoLinks>
           </S.FooterTwoSocialMedia>

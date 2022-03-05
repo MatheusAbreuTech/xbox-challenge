@@ -11,10 +11,16 @@ export const FaqTitle = styled.h2`
   line-height: 100%;
   color: ${props => props.theme.colors.primary};
   margin-bottom: 3.75rem;
+
+  @media screen and (max-width: 768px){
+    font-size: 2rem;
+  display: block;
+
+  }
 `;
 
 export const FaqTitleSpan = styled.span`
-  margin-left: 0.7rem;
+  /* margin-left: 0.7rem; */
   color: ${props => props.theme.colors.light};
 `;
 
@@ -45,6 +51,11 @@ export const FaqQuestionTitle = styled.h4`
   font-weight: 500;
   font-size: 24px;
   line-height: 150%;
+  max-width: 80%;
+
+  @media screen and (max-width: 990px){
+    font-size: 1.3rem;
+  }
 `;
 
 export const FaqQuestionIcon = styled.div<{ color: string; transform: string }>`

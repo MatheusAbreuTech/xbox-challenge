@@ -13,6 +13,14 @@ export const HeroTitle = styled.h1`
   font-size: 4.5rem;
   font-weight: 600;
   padding-bottom: 2rem;
+
+  @media screen and (max-width: 768px){
+    font-size: 3.5rem;
+  }
+
+  @media screen and (max-width: 515px){
+    font-size: 2rem;
+  }
 `
 
 export const HeroText = styled.p`
@@ -23,12 +31,21 @@ export const HeroText = styled.p`
   line-height: 29px;
   font-weight: bold;
   text-align: center;
+
+  @media screen and (max-width: 768px){
+    font-size: 1.2rem;
+  }
 `
 
 export const HeroImageContainer = styled.div`
   position: relative;
   width: 100%;
-  height: 36.25rem;
+  height: 30rem;
+
+  @media screen and (max-width: 1100px){
+    height: 20rem;
+  }
+
 `
 
 export const Herogradient = styled.div`

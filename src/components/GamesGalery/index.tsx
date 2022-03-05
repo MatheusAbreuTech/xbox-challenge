@@ -1,4 +1,3 @@
-import styles from '../styles/components/GamesGalery.module.css';
 import { GamesGaleryScroll } from '../ScrollReveal';
 import * as S from './styles';
 

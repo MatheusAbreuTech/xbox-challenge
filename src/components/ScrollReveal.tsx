@@ -36,7 +36,7 @@ export function TextControlScroll({ children }: Props) {
   useEffect(() => {
     if (sectionRef.current)
       scrollReveal().reveal(sectionRef.current, {
-        origin: 'left',
+        origin: 'top',
         distance: '100px',
         duration: 2000,
         reset: true,
@@ -50,7 +50,7 @@ export function ControlScroll({ children }: Props) {
   useEffect(() => {
     if (sectionRef.current)
       scrollReveal().reveal(sectionRef.current, {
-        origin: 'right',
+        origin: 'bottom',
         distance: '100px',
         duration: 2000,
         reset: true,
