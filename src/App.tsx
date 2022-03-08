@@ -21,33 +21,31 @@ function App() {
   }
 
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
 
-        <Container>
-          <SideBar handleOpenSidebar={handleOpenSidebar} isOpen={isOpen} />
-          <Header handleOpenSidebar={handleOpenSidebar} />
+      <Container>
+        <SideBar handleOpenSidebar={handleOpenSidebar} isOpen={isOpen} />
+        <Header handleOpenSidebar={handleOpenSidebar} />
 
-          <Hero />
-
-          <InfoContainer>
-            <ControlInfo />
-          </InfoContainer>
-        </Container>
+        <Hero />
 
         <InfoContainer>
-          <GamesGalery />
+          <ControlInfo />
         </InfoContainer>
+      </Container>
 
-        <Container>
-          <InfoContainer>
-            <Faq />
-          </InfoContainer>
-        </Container>
-        <Footer />
-      </ThemeProvider>
-    </>
+      <InfoContainer>
+        <GamesGalery />
+      </InfoContainer>
+
+      <Container>
+        <InfoContainer>
+          <Faq />
+        </InfoContainer>
+      </Container>
+      <Footer />
+    </ThemeProvider>
   );
 }
 

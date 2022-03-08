@@ -7,46 +7,45 @@ export const HeroContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 10rem;
-`
+`;
 
 export const HeroTitle = styled.h1`
   font-size: 4.5rem;
   font-weight: 600;
   padding-bottom: 2rem;
 
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     font-size: 3.5rem;
   }
 
-  @media screen and (max-width: 515px){
+  @media screen and (max-width: 515px) {
     font-size: 2rem;
   }
-`
+`;
 
 export const HeroText = styled.p`
   font-size: 1.5rem;
-  color: ${props => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.primary};
   letter-spacing: 0.05em;
   text-transform: uppercase;
   line-height: 29px;
   font-weight: bold;
   text-align: center;
 
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     font-size: 1.2rem;
   }
-`
+`;
 
 export const HeroImageContainer = styled.div`
   position: relative;
   width: 100%;
   height: 30rem;
 
-  @media screen and (max-width: 1100px){
+  @media screen and (max-width: 1100px) {
     height: 20rem;
   }
-
-`
+`;
 
 export const Herogradient = styled.div`
   width: 100%;
@@ -64,9 +63,9 @@ export const Herogradient = styled.div`
   );
   background-repeat: no-repeat;
   opacity: 0.9;
-  border: 1px solid ${props => props.theme.colors.light};
+  border: 1px solid ${(props) => props.theme.colors.light};
   filter: blur(250px);
-`
+`;
 
 export const HeroImage = styled.img`
   position: absolute;
@@ -74,8 +73,4 @@ export const HeroImage = styled.img`
   width: 100%;
   margin: 0;
   padding: 0;
-`
-
-
-
-
+`;
