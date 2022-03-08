@@ -6,16 +6,16 @@ export default function GameGallery() {
     <GamesGaleryScroll>
       <S.GameGalleryContainer>
         <S.GameImageContainer>
-          <S.GameImage src="./img/imageFarcry.png" />
+          <S.GameImage src="./img/ImageFarcry.png" />
         </S.GameImageContainer>
         <S.GameImageContainer>
-          <S.GameImage src="./img/imageForza.png" />
+          <S.GameImage src="./img/ImageForza.png" />
         </S.GameImageContainer>
         <S.GameImageContainer>
-          <S.GameImage src="./img/imageFifa.png" />
+          <S.GameImage src="./img/ImageFifa.png" />
         </S.GameImageContainer>
         <S.GameImageContainer>
-          <S.GameImage src="./img/imageMinecraft.png" />
+          <S.GameImage src="./img/ImageMinecraft.png" />
         </S.GameImageContainer>
       </S.GameGalleryContainer>
     </GamesGaleryScroll>
