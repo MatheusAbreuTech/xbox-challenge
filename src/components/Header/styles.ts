@@ -4,25 +4,31 @@ export const HeaderContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem 0;
+  height: 100px;
+
+  @media screen and (max-width: 1025px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 4rem;
+    background: ${(props) => props.theme.colors.dark};
+    z-index: 997;
+  }
 `;
 
-export const HeaderLogo = styled.div``;
+export const HeaderLogo = styled.img``;
 
 export const HeaderIcon = styled.div`
   display: none;
 
-  @media screen and (max-width: 1025px){
+  @media screen and (max-width: 1025px) {
     display: block;
-    /* position:absolute ;
-    top:0 ;
-    right: 0; */
-    /* transform: translate(-100%, 100%); */
-    font-size: 1.8rem ;
+    font-size: 1.8rem;
     cursor: pointer;
     color: #fff;
   }
-`
+`;
 
 export const HeaderMenu = styled.ul`
   max-width: 400px;
@@ -34,8 +40,8 @@ export const HeaderMenu = styled.ul`
   align-items: center;
   list-style: none;
 
-  @media screen and (max-width: 1025px){
-    display:none ;
+  @media screen and (max-width: 1025px) {
+    display: none;
   }
 `;
 
@@ -45,7 +51,7 @@ export const HeaderMenuItem = styled.li`
 
   &::after {
     content: '';
-    background: ${props => props.theme.colors.primary};
+    background: ${(props) => props.theme.colors.primary};
     height: 2px;
     width: 0;
     right: 0;
@@ -71,18 +77,18 @@ export const HeaderMenuItemLink = styled.a`
 export const HeaderButton = styled.button`
   padding: 1rem 1.5rem;
   text-transform: uppercase;
-  background: ${props => props.theme.colors.primary};
+  background: ${(props) => props.theme.colors.primary};
   border: none;
   font-weight: bold;
   font-size: 1rem;
   line-height: 18px;
-  color: ${props => props.theme.colors.dark};
+  color: ${(props) => props.theme.colors.dark};
 
   &:hover {
     opacity: 0.9;
   }
 
-  @media screen and (max-width: 1025px){
-    display:none ;
+  @media screen and (max-width: 1025px) {
+    display: none;
   }
 `;

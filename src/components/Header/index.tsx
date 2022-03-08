@@ -8,9 +8,7 @@ interface Props {
 export default function Header({ handleOpenSidebar }: Props) {
   return (
     <S.HeaderContainer>
-      <S.HeaderLogo>
-        <img src="img/logo-xbox.svg" alt="" />
-      </S.HeaderLogo>
+      <S.HeaderLogo src="img/logo-xbox.svg" />
 
       <S.HeaderIcon onClick={handleOpenSidebar}>
         <FaBars />

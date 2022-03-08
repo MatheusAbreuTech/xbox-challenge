@@ -5,7 +5,7 @@ import * as S from './styles';
 
 export default function Footer() {
   return (
-    <>
+    <S.FooterContainer>
       <S.FooterOne>
         <S.FooterOneLogo src="img/logo-xbox.svg" />
 
@@ -29,6 +29,6 @@ export default function Footer() {
           </S.FooterTwoSocialMedia>
         </S.FooterTwoDiv>
       </S.FooterTwo>
-    </>
+    </S.FooterContainer>
   );
 }

@@ -33,7 +33,7 @@ export default function Faq() {
     },
   ]);
 
-  const handleOpenQuestion = (questionId: Number) => {
+  const handleOpenQuestion = (questionId: number) => {
     const newQuestion = questions.map((question) => {
       if (question.id == questionId) {
         return { ...question, isActive: !question.isActive };

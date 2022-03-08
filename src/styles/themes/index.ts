@@ -1,4 +1,4 @@
-import { DefaultTheme } from "styled-components";
+import { DefaultTheme } from 'styled-components';
 
 const theme: DefaultTheme = {
   colors: {
@@ -7,7 +7,7 @@ const theme: DefaultTheme = {
     gray: '#777777',
     grayLight: '#c0c0c0',
     light: '#ffffff',
-  }
-}
+  },
+};
 
-export default theme
+export default theme;
