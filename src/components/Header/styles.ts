@@ -11,7 +11,7 @@ export const HeaderContainer = styled.nav`
     top: 0;
     left: 0;
     width: 100%;
-    padding: 0 4rem;
+    padding: 0 2rem;
     background: ${(props) => props.theme.colors.dark};
     z-index: 997;
   }

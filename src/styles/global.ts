@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   * {
@@ -22,9 +22,9 @@ a {
   text-decoration: none;
 }
 
-`
+`;
 
 export const Container = styled.div`
   width: min(80vw, 1280px);
   margin: auto;
-`
+`;

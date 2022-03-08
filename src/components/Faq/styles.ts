@@ -9,19 +9,19 @@ export const FaqTitle = styled.h2`
   font-weight: 600;
   font-size: 3rem;
   line-height: 100%;
-  color: ${props => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.primary};
   margin-bottom: 3.75rem;
+  gap: 0.8rem;
 
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     font-size: 2rem;
-  display: block;
-
+    display: block;
   }
 `;
 
 export const FaqTitleSpan = styled.span`
   /* margin-left: 0.7rem; */
-  color: ${props => props.theme.colors.light};
+  color: ${(props) => props.theme.colors.light};
 `;
 
 export const FaqQuestionsContainer = styled.ul`
@@ -32,11 +32,11 @@ export const FaqQuestion = styled.li`
   padding: 2.6rem 0;
 
   &:first-child {
-    border-bottom: 2px solid ${props => props.theme.colors.gray};
+    border-bottom: 2px solid ${(props) => props.theme.colors.gray};
   }
 
   &:last-child {
-    border-top: 2px solid ${props => props.theme.colors.gray};
+    border-top: 2px solid ${(props) => props.theme.colors.gray};
   }
 `;
 
@@ -53,7 +53,7 @@ export const FaqQuestionTitle = styled.h4`
   line-height: 150%;
   max-width: 80%;
 
-  @media screen and (max-width: 990px){
+  @media screen and (max-width: 990px) {
     font-size: 1.3rem;
   }
 `;
@@ -74,5 +74,5 @@ export const FaqQuestionText = styled.p<{ display: string }>`
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
-  color: ${props => props.theme.colors.grayLight};
+  color: ${(props) => props.theme.colors.grayLight};
 `;
