@@ -10,8 +10,7 @@ export function HeroTitleScroll({ children }: Props) {
   useEffect(() => {
     if (sectionRef.current)
       scrollReveal().reveal(sectionRef.current, {
-        duration: 2000,
-        reset: true
+        duration: 2000
       });
   }, []);
   return <section ref={sectionRef}>{children}</section>;
@@ -24,8 +23,7 @@ export function HeroImgScroll({ children }: Props) {
       scrollReveal().reveal(sectionRef.current, {
         origin: 'bottom',
         distance: '80px',
-        duration: 2500,
-        reset: true
+        duration: 2500
       });
   }, []);
   return <section ref={sectionRef}>{children}</section>;
@@ -38,8 +36,7 @@ export function TextControlScroll({ children }: Props) {
       scrollReveal().reveal(sectionRef.current, {
         origin: 'top',
         distance: '100px',
-        duration: 2000,
-        reset: true
+        duration: 2000
       });
   }, []);
   return <section ref={sectionRef}>{children}</section>;
@@ -52,8 +49,7 @@ export function ControlScroll({ children }: Props) {
       scrollReveal().reveal(sectionRef.current, {
         origin: 'bottom',
         distance: '100px',
-        duration: 2000,
-        reset: true
+        duration: 2000
       });
   }, []);
   return <section ref={sectionRef}>{children}</section>;
@@ -64,8 +60,7 @@ export function GamesGaleryScroll({ children }: Props) {
   useEffect(() => {
     if (sectionRef.current)
       scrollReveal().reveal(sectionRef.current, {
-        duration: 5000,
-        reset: true
+        duration: 5000
       });
   }, []);
   return <section ref={sectionRef}>{children}</section>;
@@ -78,8 +73,7 @@ export function FaqScroll({ children }: Props) {
       scrollReveal().reveal(sectionRef.current, {
         origin: 'bottom',
         distance: '100px',
-        duration: 2000,
-        reset: true
+        duration: 2000
       });
   }, []);
   return <section ref={sectionRef}>{children}</section>;
